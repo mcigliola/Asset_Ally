@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Defines layout for individual line items in database viewed through recycler view in Inventory Activity -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="4.5">
+
+    <!-- Item Id -->
+    <TextView
+        android:id="@+id/idTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/item_id" />
+
+    <!-- Item Name -->
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_weight="3"
+        android:text="@string/item_name" />
+
+    <!-- Item Quantity: Click to launch QuantityDialogFragment to change value.-->
+    <TextView
+        android:id="@+id/quantityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_weight="1"
+        android:text="@string/item_quantity" />
+
+
+</LinearLayout>

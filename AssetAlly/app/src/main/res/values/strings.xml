@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Asset Ally</string>
+    <string name="email_hint">Login with email</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button">LOGIN</string>
+    <string name="create_account_button">Create Account</string>
+    <string name="logo_image_description">Asset Ally logo</string>
+    <string name="search_button">GO</string>
+    <string name="inventory_title">Inventory</string>
+    <string name="item_id">Item Id</string>
+    <string name="item_name">Item Name</string>
+    <string name="item_quantity">Item Quantity</string>
+    <string name="deleteItemButton">Delete Item</string>
+    <string name="item_description">Item Description</string>
+    <string name="alert_quantity">Set quantity to receive low inventory alert.</string>
+    <string name="save_changes">Save</string>
+    <string name="receive_notifications">Receive low inventory notifications for this item?</string>
+    <string name="search_bar">Search . . .</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="create_account_title">Create New Account</string>
+    <string name="new_email">Enter your email address</string>
+    <string name="new_password">Create a new password</string>
+    <string name="create_new_account_button">Create Account</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

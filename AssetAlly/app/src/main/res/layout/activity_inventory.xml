@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:context=".InventoryActivity">
+
+    <!-- Inventory Title -->
+    <TextView
+        android:id="@+id/inventoryTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="@string/inventory_title"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/menuButton"
+        app:layout_constraintStart_toEndOf="@id/notificationsButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Menu Button -->
+    <ImageButton
+        android:id="@+id/menuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_menu_24" />
+
+    <!-- Notifications Button -->
+    <ImageButton
+        android:id="@+id/notificationsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#002B2D30"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_notifications_24"
+        app:tint="@color/green" />
+
+    <!-- SearchView -->
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:background="#6B4DC6E5"
+        android:hint="@string/search_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/columnTitlesLinearLayout"
+        app:layout_constraintTop_toBottomOf="@id/inventoryTitle"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"/>
+
+
+    <!-- RecyclerView: Displays database results. Uses item_stock.xml layout for each line. -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/inventoryRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/addItemButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/columnTitlesLinearLayout"
+        tools:listitem="@layout/item_stock" />
+
+    <!-- Table headers -->
+    <LinearLayout
+        android:id="@+id/columnTitlesLinearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView"
+        android:weightSum="4.5">
+
+        <!-- Item Id -->
+        <TextView
+            android:id="@+id/titleItemId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/item_id"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/titleItemName"
+            app:layout_constraintStart_toStartOf="@id/columnTitlesLinearLayout"
+            app:layout_constraintBottom_toBottomOf="@id/columnTitlesLinearLayout" />
+
+        <!-- Item Name -->
+        <TextView
+            android:id="@+id/titleItemName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="@string/item_name"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/titleItemId"
+            app:layout_constraintBottom_toBottomOf="@id/columnTitlesLinearLayout" />
+
+        <!-- Item Quantity -->
+        <TextView
+            android:id="@+id/titleItemQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/item_quantity"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="end"
+            android:layout_marginRight="16dp"
+            app:layout_constraintEnd_toStartOf="@id/deleteButton"
+            app:layout_constraintStart_toEndOf="@id/titleItemName"
+            app:layout_constraintBottom_toBottomOf="@id/columnTitlesLinearLayout" />
+
+    </LinearLayout>
+
+
+    <!-- Add: Click to open fragment for adding new items -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addItemButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:srcCompat="@drawable/baseline_add_circle_24"
+        app:backgroundTint="@color/dark_blue"
+        app:tint="@android:color/white"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Fragment container -->
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

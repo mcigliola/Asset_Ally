@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/white">
+
+    <!-- Item Name -->
+    <EditText
+        android:id="@+id/itemNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/item_name"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Item Quantity -->
+    <EditText
+        android:id="@+id/itemQuantityEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/item_quantity"
+        android:inputType="number"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Item Description -->
+    <EditText
+        android:id="@+id/itemDescriptionEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/item_description"
+        android:inputType="textMultiLine"/>
+
+    <!-- Spacer -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Alert Quantity -->
+    <TextView
+        android:id="@+id/alertQuantityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="@string/alert_quantity"/>
+
+    <EditText
+        android:id="@+id/alertQuantityEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Receive notifications? -->
+    <TextView
+        android:id="@+id/receiveNotificationsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="@string/receive_notifications"/>
+
+    <ToggleButton
+        android:id="@+id/alertsToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <!-- Horizontal layout containing Save and Delete buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/saveItemButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save_changes" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/deleteItemButton"
+            android:backgroundTint="@color/red"/>
+
+    </LinearLayout>
+
+    <!-- Cancel button -->
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel_button"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="16dp"
+        android:layout_gravity="end"/>
+
+</LinearLayout>

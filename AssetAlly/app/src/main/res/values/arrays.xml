@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="stockItems">
+
+    </string-array>
+    <string-array name="descriptions">
+
+    </string-array>
+    <integer-array name="quantities">
+
+    </integer-array>
+</resources>
