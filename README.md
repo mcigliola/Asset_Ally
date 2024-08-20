@@ -1,13 +1,19 @@
 # Asset_Ally
 
 **A streamlined inventory management app for efficient asset tracking and low-stock alerts.**
-![Login screen](Images/Login.jpg)
-![Invenotry screen](../Images/Inventory.jpg)
-![Item detail screen](../Images/ItemDetail,jpg)
+
+
+
 
 ### Introduction
 
 **AssetAlly** is an Android application designed to simplify inventory management by providing users with essential tools to track, manage, and receive alerts for their assets. The app is ideal for small businesses or personal use, offering a straightforward interface and essential features to keep your inventory organized.
+
+### App Screenshots
+
+| ![Login screen](Images/Login.png)| ![Invenotry screen](Images/Inventory.png)| ![Item detail screen](Images/ItemDetail.png)|
+|:----------------------------------------:|:----------------------------------------:|:----------------------------------------:|
+| Login Screen                 | Main inventory view               | Item detail view for adding new items or updating exisiting items                 |
 
 ### Features
 
@@ -25,7 +31,7 @@
 - **Server:** Raspberry Pi configured as a SQL server
 
 ### Installation & Setup
-- Clone the repository: git clone https://github.com/yourusername/AssetAlly.git
+- Clone the repository: git clone https://github.com/mcigliola/AssetAlly.git
 - Open in Android Studio: Import the project into Android Studio.
 - Database Setup: You can either set up the SQL database on your local machine or experiment with hosting it on a Raspberry Pi (instructions below).
 - Set up environment variables: Configure the connection settings in the app to link to your chosen database.
