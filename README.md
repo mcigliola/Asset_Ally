@@ -1,25 +1,63 @@
 # Asset_Ally
-Android inventory app 
 
-**Briefly summarize the requirements and goals of the app you developed. What user needs was this app designed to address?**
+**A streamlined inventory management app for efficient asset tracking and low-stock alerts.**
 
-  The goal of this app was to provide streamlined inventory management functionality.  The app needed to allow users to view inventory items saved to a database, as well as search, add, edit, and delete those items.  The   option to add SMS alerts for low inventory notices was also important for the user.  
-  
-**What screens and features were necessary to support user needs and produce a user-centered UI for the app? How did your UI designs keep users in mind? Why were your designs successful?**
+### Introduction
 
-  The primary screens for this app include a login screen that authenticates users for data security and an inventory activity that provides the main view of the inventory.  From this inventory activity, the user can       quickly access other screens to view and edit the details of an item or add a new item to the database.  From the login screen, should the user need to create a new account, another screen is available to handle that     function.  I chose to keep the UI for this app as streamlined as possible to meet the needs of users of all technology skill levels.  The features are designed to be intuitive so that, for example, the user need only     to click on the item’s name to be taken to a screen with its details.  I believe my design is successful because there is little visual clutter in each screen and the UI features follow Android design guidelines.
-  
-**How did you approach the process of coding your app? What techniques or strategies did you use? How could those be applied in the future?**
+**AssetAlly** is an Android application designed to simplify inventory management by providing users with essential tools to track, manage, and receive alerts for their assets. The app is ideal for small businesses or personal use, offering a straightforward interface and essential features to keep your inventory organized.
 
-  As I began coding this app, I started with the main inventory activity and worked through building each feature accessible from this point, one at a time.  I kept notes as I worked to keep track of tasks that were       complete and tasks that I still needed to address.  This was really helpful since I was still learning the architecture and needed to break down parts of the apps into smaller tasks.  I also used the various apps         discussed by the textbook as models and often looked to them for guidance when I was confused about how to connect the pieces.  Working in small chunks, taking notes, and finding examples are all strategies I have used   before and will continue to lean on in future projects.   
-  
-**How did you test to ensure your code was functional? Why is this process important and what did it reveal?**
+### Features
 
-  To test my app, I used the emulator to assess whether functions were working as expected.  I also added logging commands to the code to diagnose problems in the Logcat.  This was critical because there a number of        places in the app where an object must be passed as an argument and a null pointer error is easy to create by mistake.  In the emulator this just looks like the app isn’t working, but in the Logcat I was able to          quickly find the fault in my logic and address it.  
-  
-**Considering the full app design and development process, from initial planning to finalization, where did you have to innovate to overcome a challenge?**
+- **User Authentication:** Secure login system to protect access to your inventory.
+- **Inventory Management:** Add, edit, and delete items in your inventory with ease.
+- **Real-Time Updates:** Backend connected to a SQL database hosted on a Raspberry Pi, ensuring data is always up-to-date.
+- **Low Quantity Alerts:** Automatic notifications when an item's quantity drops below a specified threshold, helping you restock on time.
 
-  I can’t say that I did anything innovative in building this app, because it is all very basic, but it was a lot of new ground for me.  I did my best to think through what would best serve the user, especially if the      user were a warehouse with multiple employees all using the app at the same time.  The database queries return LiveData, keeping information up to date.  The user object includes a “role” attribute that can be used in    a future update to introduce role-based access to data and features.  To delete an item, the user must open the item detail, click delete, and then click through a warning dialog box to reduce the risk of anything        being accidentally deleted. 
+### Technologies Used
+
+- **Frontend:** Java, XML (Android Studio)
+- **Backend:** SQL database (hosted on Raspberry Pi)
+- **Authentication:** Android Studio’s built-in authentication methods
+- **Database:** SQL for data management and persistence
+- **Server:** Raspberry Pi configured as a SQL server
+
+### Installation & Setup
+- Clone the repository: git clone https://github.com/yourusername/AssetAlly.git
+- Open in Android Studio: Import the project into Android Studio.
+- Database Setup: You can either set up the SQL database on your local machine or experiment with hosting it on a Raspberry Pi (instructions below).
+- Set up environment variables: Configure the connection settings in the app to link to your chosen database.
+- Build and Run: Use Android Studio to build the project and deploy it to your Android device or emulator.
+
+### Optional: Raspberry Pi Setup
+For those interested in experimenting with a Raspberry Pi as the backend server:
+
+Step 1: Install and configure SQL on your Raspberry Pi.
+Step 2: Update the app's connection settings to point to the Raspberry Pi server.
+Step 3: Test the connection to ensure the app can communicate with the Raspberry Pi-hosted database.
+
+### Usage
+
+- **Login:** Enter your credentials to access the app.
+- **Manage Inventory:** Use the interface to add new items, update existing ones, or remove them from the inventory.
+- **Monitor Alerts:** Receive notifications when items are running low in stock, ensuring timely restocking.
+
+### Project Scope
+
+- **Role:** Full-stack developer responsible for both the Android front-end and SQL back-end integration.
+- **Challenges:** Ensured seamless communication between the app and the Raspberry Pi-hosted SQL server, tackled issues with real-time data syncing, and implemented secure authentication.
+- **Learning Outcomes:** Gained experience in Android app development, backend server management on Raspberry Pi, and database integration.
+
+### Future Enhancements
+
+- **Enhanced Reporting:** Add features for generating detailed inventory reports.
+- **Multi-user Support:** Enable multiple user roles with varying permissions.
+- **Cloud Integration:** Shift the backend from a local server to a cloud-based solution for better scalability.
+
+### Contact
+
+- **GitHub:** [mcigliola](https://github.com/mcigliola)
+- **LinkedIn:** [Mary Cigliola](https://linkedin.com/in/mary-cigliola)
+
   
 **In what specific component from your mobile app were you particularly successful in demonstrating your knowledge, skills, and experience?  **
 
