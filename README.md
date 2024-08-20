@@ -1,6 +1,9 @@
 # Asset_Ally
 
 **A streamlined inventory management app for efficient asset tracking and low-stock alerts.**
+![Login screen](Images/Login.jpg)
+![Invenotry screen](../Images/Inventory.jpg)
+![Item detail screen](../Images/ItemDetail,jpg)
 
 ### Introduction
 
